@@ -1,0 +1,56 @@
+# STM32 / CubeMX / GCC 工程通用 .gitignore
+# 用法：复制到仓库根目录，改名为 .gitignore
+
+# ========== 构建产物（绝对不要提交） ==========
+build/
+cmake-build-*/
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.su
+*.cyclo
+*.axf
+*.crf
+*.dep
+*.htm
+*.lnp
+*.plg
+*.tra
+*.iex
+*.sct
+*.scvd
+
+# ========== CubeMX 生成缓存 ==========
+.mxproject
+*.ioc.bak
+*.bak
+
+# ========== Keil MDK（如果以后用） ==========
+MDK-ARM/*.uvguix.*
+MDK-ARM/Objects/
+MDK-ARM/Listings/
+*.uvoptx.bak
+
+# ========== VSCode ==========
+# 只保留团队共享的 3 个文件，其余（缓存、workspace）不提交
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/c_cpp_properties.json
+
+# ========== 系统垃圾 ==========
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ========== 日志 / 临时文件 ==========
+*.log
+~$*
+*.tmp
